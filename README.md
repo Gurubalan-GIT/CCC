@@ -1,2 +1,2 @@
-# Algorithms-C
-Collection of algorithms done in C language. 
+# Placement cell
+Collection of problems aimed for placements.
