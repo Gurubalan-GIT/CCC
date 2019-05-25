@@ -1,7 +1,7 @@
 ## Disclaimer : Don't push to this repository before 29th May. 
 
 # Getting started :
-This is a colloborative program for competitive coding, from scratch, till: Well let's say advanced. Multiple lanugages.
+This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple lanugages.
 - ### Index: 
   - [Git](#Git) 
   - [Coding](#noob-town) 
@@ -17,5 +17,5 @@ After the installation, do these steps:
 $ git config --global user.name "Mona Lisa"
 $ git config --global user.email "email@example.com"
 ```
-
+  
 
