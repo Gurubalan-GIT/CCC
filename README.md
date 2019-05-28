@@ -1,4 +1,4 @@
-### **Disclaimer** : Don't push to this repository before 29th May. 
+### **Disclaimer** : Don't push to this repository before 29th May. For discussion pull up as issues and join this [group](https://www.linkedin.com/groups/10453094/).
 
 ## Getting started :
 This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple lanugages.
