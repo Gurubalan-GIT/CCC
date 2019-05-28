@@ -45,13 +45,6 @@ $ git config --global user.email "email@example.com"
   - Set the path and enter `python` in cmd to enter the python shell.
   - To execute a script file run `python filename.py`.
 
-## Contribution Guidelines 
-
-
-## Contributors 
-@Gurubalan-GIT
-
-
 
 ## Non-Contributors 
 Not a contributor? Pull requests are always appretiated and accepted by the moderators here. Want to become a contributor with push access? Drop me a mail and mark it as `important`.
