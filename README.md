@@ -7,16 +7,16 @@ This is a colloborative program for competitive coding, from scratch, till: Well
     - [To-do](#to-do)
     - [Git](#Git) 
     - [Coding](#coding) 
-    - [Contribution Guidelines](#contribution-guidelines) 
-    - [Contributors](#contributors) 
+    - [Contribution Guidelines](/contributing.md/#contribution-guidelines) 
+    - [Contributors](/contributing.md/#contributors) 
   - [Non-Contributors](#non-contributors)
 
 
 ## To-do 
-- [ ] Complete the [Readme](/README.md) documentation.
-- [ ] Add all the contributors and add them to the ReadMe documentation.
+- [ ] Complete the [Read-me.md](/README.md) documentation.
+- [ ] Add all the contributors and add them to the Read-me documentation.
 - [ ] Create the file structure boiler plate to start pushing code. 
-- [ ] Update contribution guidelines with file name syntax and code guidelines.  
+- [ ] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md).  
 
 ## Git
 New to Git? No worries. Assuming you have created an account and reading this, go ahead and download the CLI interface for GIT, [here](https://git-scm.com/downloads). 
