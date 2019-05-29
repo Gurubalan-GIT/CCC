@@ -17,6 +17,7 @@ This is a colloborative program for competitive coding, from scratch, till: Well
 - [ ] Create the file structure boiler plate to start pushing code. 
 - [ ] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md). 
 - [ ] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.  
+- [ ] File name syntax will be updated later. (Start pushing code in the given topics or even add more by creating a new folder!)
   
 ## Communication
 Communication is done through a LinkedIn group, join [here](https://www.linkedin.com/groups/10453094/). Other code related doubts, reviews can be put up as Github issues. Even recommendations, changes, ideas and so on for this repository. 
