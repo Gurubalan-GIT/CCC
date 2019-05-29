@@ -2,6 +2,7 @@
 This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple lanugages.
 - ### Index: 
   - Contributors : 
+    - [Current Instructions](#what-to-do-currently)
     - [To-do](#to-do)
     - [Communication]()
     - [Git](#Git) 
@@ -10,6 +11,15 @@ This is a colloborative program for competitive coding, from scratch, till: Well
     - [Contributors](/contributing.md/#contributors) 
   - [Non-Contributors](#non-contributors)
 
+## What to do currently? 
+Right as of now, people who are well versed in the topics can start pushing in their comfortable language. For the people who are beginners, worry not, you can do too, and if you have doubts, raise it as issues. The readme file will get updated with videos and material guidelines for Git and other coding topics as well, so please be patient. 
+
+You guys can follow the file structure which is just a template idea for now, so you know where to push what, but you have more topics? A different lanugage? No problem. Feel free to create and add new stuff. 
+
+*Important* : Do update your @Username links in the [contributors](/contributing.md/#contributors) section!
+
+
+If any problems arrive communicate through the group or through Issues as well. Happy coding, guys! 
 
 ## To-do 
 - [ ] Complete the [Read-me.md](/README.md) documentation.
