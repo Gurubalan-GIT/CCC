@@ -1,10 +1,9 @@
-### **Disclaimer** : Don't push to this repository before 29th May. For discussion pull up as issues and join this [group](https://www.linkedin.com/groups/10453094/).
-
 ## Getting started :
 This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple lanugages.
 - ### Index: 
   - Contributors : 
     - [To-do](#to-do)
+    - [Communication]()
     - [Git](#Git) 
     - [Coding](#coding) 
     - [Contribution Guidelines](/contributing.md/#contribution-guidelines) 
@@ -14,10 +13,13 @@ This is a colloborative program for competitive coding, from scratch, till: Well
 
 ## To-do 
 - [ ] Complete the [Read-me.md](/README.md) documentation.
-- [ ] Add all the contributors and add them to [contributers](/contributing.md/#contributers) documentation.
+- [ ] Add all the contributors and add them to [contributers](/contributing.md/#contributers) in the [contributing.md](/contributing.md) documentation.
 - [ ] Create the file structure boiler plate to start pushing code. 
 - [ ] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md). 
 - [ ] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.  
+  
+## Communication
+Communication is done through a LinkedIn group, join [here](https://www.linkedin.com/groups/10453094/). Other code related doubts, reviews can be put up as Github issues. Even recommendations, changes, ideas and so on for this repository. 
 
 ## Git
 New to Git? No worries. Assuming you have created an account and reading this, go ahead and download the CLI interface for GIT, [here](https://git-scm.com/downloads). 
