@@ -14,7 +14,7 @@ This is a colloborative program for competitive coding, from scratch, till: Well
 
 ## To-do 
 - [ ] Complete the [Read-me.md](/README.md) documentation.
-- [ ] Add all the contributors and add them to the Read-me documentation.
+- [ ] Add all the contributors and add them to [contributers](/contributing.md/#contributers) documentation.
 - [ ] Create the file structure boiler plate to start pushing code. 
 - [ ] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md). 
 - [ ] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.  
