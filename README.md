@@ -43,6 +43,17 @@ After the installation, do these steps:
 $ git config --global user.name "Mona Lisa"
 $ git config --global user.email "email@example.com"
 ```
+Want to clone and push to this repository?
+```
+$ git clone https://github.com/Gurubalan-GIT/CCC
+```
+Some sources to learn git :
+  - [Official documentation](https://git-scm.com/doc)
+  - [Traversy Media](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+  - [Cory Schafer](https://www.youtube.com/watch?v=HVsySz-h9r4)
+  - [Code Once](https://www.youtube.com/watch?v=o1nHIbRLMHQ)
+  - [Edureka](https://www.youtube.com/watch?v=xuB1Id2Wxak)
+
 ## Coding 
 - C/C++
   - Install [TCC-MinGW](http://www.mingw.org/) compiler for executing and compiling C and C++ files.
