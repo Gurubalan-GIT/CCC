@@ -14,7 +14,7 @@ print(len(a)) #will give 16 as output
 print(a.index("s")) #will give output 3
 
 #If the character does not exist in string, it will print an error stating substring not found.
-print(a.index("x") #will give an error.
+print(a.index("x")) #will give an error.
       
 
 #To count occurences of a character in a string:
@@ -62,7 +62,7 @@ print(a.endswith("abc")) #Returns False
 print(a.split()) #The default argument in split is whitespace, which means the a will now contain a list of all the words in the string separated by whitespaces.
 #Output will be ['this', 'is', 'a', 'string']
 
-print(c.split("s")
+print(c.split("s"))
 # ['thi', ' i', ' a ', 'tring']
 """There is loss in a string split."""
 
