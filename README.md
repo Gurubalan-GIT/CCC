@@ -1,4 +1,4 @@
-### **Disclaimer** : Adding Contributors has been paused for now. Will be resumed after `3` days. Codes will be pushed periodically. Thank you!
+### **Disclaimer** : Adding Contributors has been paused for now. Will be resumed on July 8th. Codes will be pushed periodically. Thank you!
 
 ## Getting started :
 This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple lanugages.
