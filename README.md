@@ -16,9 +16,9 @@ Right as of now, people who are well versed in the topics can start pushing in t
 
 You guys can follow the file structure which is just a template idea for now, so you know where to push what, but you have more topics? A different lanugage? No problem. Feel free to create and add new stuff. 
 
+```
 *Important* : Do update your @Username links in the [contributors](/contributing.md/#contributors) section!
-
-
+```
 If any problems arrive communicate through the group or through Issues as well. Happy coding, guys! 
 
 ## To-do 
