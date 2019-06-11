@@ -15,7 +15,7 @@ This is a colloborative program for competitive coding, from scratch, till: Well
 
   - ## What to do currently? 
 
-    Right as of now, people who are well versed in the topics can start pushing in their comfortable language. For the people who are beginners, worry not, you can do too, and if you have doubts, raise it as issues. The syntax and instructions are given [here](\contributing.md) for pushing code.
+    Right as of now, people who are well versed in the topics can start pushing in their comfortable language. For the people who are beginners, worry not, you can do too, and if you have doubts, raise it as issues. The syntax and instructions are given [here](/contributing.md) for pushing code.
 
     You guys can follow the file structure which is just a template idea for now, so you know where to push what, but you have more topics? A different lanugage? No problem. Feel free to create and add new stuff. 
 
