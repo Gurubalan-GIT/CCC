@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1557142147 source:c:\users\uchih\documents\college\compiler design\final practicals\shiftreduceparser\main.cpp
+	<iostream>
+	<cstring>
+	<stdio.h>
+
