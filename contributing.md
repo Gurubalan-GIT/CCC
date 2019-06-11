@@ -16,8 +16,15 @@
     Another example implemented well enough would be [this](\C++\Ad-Hoc\DiscovertheRightNumber.cpp)
     by [@Rajeshwari](https://github.com/Yorunome).
 
+    Now, If you're solving from Hackerrank, CodeChef, Hackerearth and so on, do mention where this is from, and if possible the link to it also. So this would go like : 
+    ```
+    /* From Hackerrank, Link : https://thelink.com */
+    ```
+    This will later help in the future to redesign the file structure based on coding sites which has been solved.
+
 >### File Names
   - The go to format followed here is `camelCase`, preferably no spaces in-between file names (Makes it easier for terminal based access) *or* file names can be seperated by a `-` to mention alternative implementations and so on. ( Eg: fibonacci-Recursion.ext )
+  - **Important** : Do remember camelCase is followed only for file structures and not code. That is the respective native language syntax.
   
 >### Pull Requests 
   - If you have any doubts in your code or want to submit for a review you can do any of these: 
