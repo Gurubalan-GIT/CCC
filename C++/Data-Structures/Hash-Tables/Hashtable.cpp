@@ -10,8 +10,6 @@
 #define debug(c) cout<<c<<endl;
 #define find(v,x)  find(all(v),x)!=v.end()
 
-
-
 using namespace std;
 
 typedef vector<ll>vi;
@@ -21,14 +19,14 @@ typedef tuple<ll,ll,ll>ti;
 
 int main(){
     ios_base::sync_with_stdio(false);
+
+// Take number of student details
     int n;
     cin>>n;
     map<string,pair<string,int>>m;
-//    m["Bharat"]=20;
-    
-//    m["A"]=mp("B",3);
 
-//    cout<<m["A"].second<<endl;
+
+// Create a map and assing key as student "Rollno" and value as pair of Student Name and Year 
 
     for(ll i=0;i<n;i++){
         string Rollno,name;
@@ -37,6 +35,8 @@ int main(){
         m[Rollno]=mp(name,year);
     }
     
+//Check Student Details using Rollno
+
     ll t;
     cin>>t;
     while(t--){
@@ -47,13 +47,20 @@ int main(){
 
 }
 
-/*
-    for(ll i=0;i<n;i++){
-        string Rollno,name;
-        ll year;
-        cin>>name>>age;
-        m[name]=age;
-    }
 
+/*
+input:-
+3
+16EGICS018 Bharat 4
+16EGICS004 Aditya 4
+16EGICS002 Abhi 4
+2
+16EGICS018
+16EGICS002
+
+output:-
+Bharat 4
+Abhi 4
 
 */
+
