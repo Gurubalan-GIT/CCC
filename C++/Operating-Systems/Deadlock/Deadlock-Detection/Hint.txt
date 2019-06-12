@@ -1,0 +1,12 @@
+/*
+ * Created Date: Sunday May 5th 2019
+ * Author: Gurubalan Harikrishnan
+ * Email-ID: gurubalan.work@gmail.com
+ * -----
+ * Copyright (c) 2019 Gurubalan Harikrishnan
+ */
+
+- Same as deadlock avoidance using banker's algorithm, only difference is, check wheather the finish[] array is actually completely 1,
+which signifies all have been finished and all are true (Found value becomes true at the end).
+- So instead of checking the bool found value, check the finish[] array values, where all of them should be 1. If any one is 0, then
+in a loop, the i'th instance of that array, is actually the process which is in deadlock state.  
