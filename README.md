@@ -1,5 +1,5 @@
 ## Getting started :
-This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple lanugages.
+This is a colloborative program for competitive coding, from scratch, till: Well let's say _advanced_. Multiple languages.
 - ### Index: 
   - [Contributors](#contributors) : 
     - [Current Instructions](#what-to-do-currently)
