@@ -22,7 +22,7 @@ public class LinearSearch {
 		sc.close();
 		for (int i = 0; i < a.length; i++) {
 			if (a[i] == val) {
-				System.out.println("The value is present at location " + i + " in a array");
+				System.out.println("The value is present at index " + i + " in a array");
 				break;
 			}
 
@@ -34,5 +34,5 @@ public class LinearSearch {
 /* OUTPUT
 Enter the number to search
 6
-The value is present at location 3 in a array 
+The value is present at index 3 in a array 
 */
