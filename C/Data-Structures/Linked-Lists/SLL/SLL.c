@@ -15,12 +15,36 @@ struct node{
     */
 };
 struct node *head=NULL;
+void append();
+void printSLL();
 int main(){
-    int n;
+    int ch;
+    while(1){
+        printf("\nSLL Operations:\n");
+        printf("1.Append\n");
+        printf("2.Print SLL\n");
+        printf("3.Exit\n");
+
+        printf("Enter your choice:\n");
+        scanf("%d",&ch);
+        switch (ch)
+        {
+        case 1: append();
+            break;
+        case 2: printSLL();
+            break;
+        case 3: exit(0);
+            break;
+        default: printf("Invalid choice!");
+            break;
+        }
+    }
+}
+
+void append(){
     struct node *temp;
     temp=(struct node *)malloc(sizeof(struct node));
-    printf("Enter the number of nodes you want to add at the end:\n");
-    scanf("%d",&n);
+    printf("Enter the node value-\n");
     scanf("%d",&temp->data);
     temp->next=NULL;
     if(head==NULL){
@@ -28,14 +52,20 @@ int main(){
     }
     else{   
         struct node *traverse;
-        head=traverse;
+        traverse=head;
         while(traverse->next != NULL){
             traverse=traverse->next;
         }
         traverse->next=temp;
     }
+}
+
+void printSLL(){
     struct node *ptr;
     ptr=head;
+    while(ptr->next!=NULL){
+        printf("%d ",ptr->data);
+        ptr=ptr->next;
+    }
     printf("%d",ptr->data);
-
 }
