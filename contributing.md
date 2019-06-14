@@ -43,7 +43,15 @@
       
       This is a repository-safe method and is the most recommended way to go, if you're not sure or have some doubts in what you're pushing.
 
-      Example : Go to the pull requests tab and click the button '✔ SomeNumber Closed', see the requests made by [@anushreekhanna](https://github.com/anushreekhanna) and [@ganesh-sadanala](https://github.com/ganesh-sadanala) who have done the following.  
+      Example : Go to the pull requests tab and click the button '✔ SomeNumber Closed', see the requests made by [@anushreekhanna](https://github.com/anushreekhanna) and [@ganesh-sadanala](https://github.com/ganesh-sadanala) who have done the following. 
+
+>### Competitive coding
+  - There is a dedicated folder in each of the language directories, with the headers being explained, the competitive codes can be pushed there and later sorted according to the sources. 
+
+>### Issues
+  - Additional labels have been added to the issues tab, if you have an additional topic/label you want to add or actually add/change feautures in this repository, create issues using the label - `Update/Changes/Requests`.
+  
+  - Doubts can also be raised and hence there can be several threads about it.
 
 ## Contributors 
 [@Gurubalan-GIT](https://github.com/Gurubalan-GIT)
