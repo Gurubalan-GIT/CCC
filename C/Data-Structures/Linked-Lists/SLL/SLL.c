@@ -14,6 +14,7 @@ struct node{
     that int* x,y,z means, only x is a pointer here, not y and z. Don't get confused. 
     */
 };
+
 struct node *head=NULL;
 void append();
 void printSLL();
@@ -63,9 +64,8 @@ void append(){
 void printSLL(){
     struct node *ptr;
     ptr=head;
-    while(ptr->next!=NULL){
+    while(ptr!=NULL){
         printf("%d ",ptr->data);
-        ptr=ptr->next;
+        ptr=ptr->next;       
     }
-    printf("%d",ptr->data);
 }
