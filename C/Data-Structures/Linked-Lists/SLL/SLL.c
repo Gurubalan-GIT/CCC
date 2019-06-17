@@ -17,6 +17,11 @@ struct node{
 
 struct node *head=NULL;
 void append();
+void addFront();
+void insertAtPos();
+void deleteLast();
+void deleteFirst();
+void deletePos();
 void printSLL();
 int main(){
     int ch;
@@ -24,7 +29,7 @@ int main(){
         printf("\nSLL Operations:\n");
         printf("1.Append\n");
         printf("2.Print SLL\n");
-        printf("3.Exit\n");
+        printf("8.Exit\n");
 
         printf("Enter your choice:\n");
         scanf("%d",&ch);
@@ -34,7 +39,17 @@ int main(){
             break;
         case 2: printSLL();
             break;
-        case 3: exit(0);
+        case 3: addFront();
+            break;
+        case 4: insertAtPos();
+            break;
+        case 5: deleteLast();
+            break;
+        case 6: deleteFirst();
+            break;
+        case 7: deletePos();
+            break;  
+        case 8: exit(0);
             break;
         default: printf("Invalid choice!");
             break;
@@ -59,6 +74,31 @@ void append(){
         }
         traverse->next=temp;
     }
+}
+
+void addFront(){
+    struct node *temp;
+    temp=(struct node *)malloc(sizeof(struct node));
+    printf("Enter the node value-\n");
+    scanf("%d",&temp->data);
+        temp->next=head;
+        head=temp;
+}
+
+void insertAtPos(){
+
+}
+
+void deleteLast(){
+
+}
+
+void deleteFirst(){
+
+}
+
+void deletePos(){
+
 }
 
 void printSLL(){
