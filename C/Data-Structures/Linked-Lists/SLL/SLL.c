@@ -29,6 +29,11 @@ int main(){
         printf("\nSLL Operations:\n");
         printf("1.Append\n");
         printf("2.Print SLL\n");
+        printf("3.Add Element in the begenning\n");
+        printf("4.Insert element at a given position\n");
+        printf("5.Delete the last element\n");
+        printf("6.Delete the first element\n");
+        printf("7.Delete an element at a given position\n");
         printf("8.Exit\n");
 
         printf("Enter your choice:\n");
@@ -90,11 +95,20 @@ void insertAtPos(){
 }
 
 void deleteLast(){
-
+    struct node *ptr,*curr;
+    ptr=head;
+    curr=head;
+    while(ptr->next != NULL){
+        ptr=ptr->next;
+    }
+    while(curr->next!=ptr){
+        curr=curr->next;
+    }
+    curr->next=NULL;
 }
 
 void deleteFirst(){
-
+    head=head->next;
 }
 
 void deletePos(){
