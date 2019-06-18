@@ -95,7 +95,26 @@ void addFront(){
 }
 
 void insertAtPos(){
-    
+    int index,i,size=0;
+    printf("Enter the index where you want to enter the node: \n");
+    scanf("%d",&index);
+    if(index==1){
+        addFront();
+    }else if(index==length(size)){
+        append();
+    }else{
+        struct node *temp,*prev;
+        prev=head;
+        int pos=0,count=0;
+        temp=(struct node *)malloc(sizeof(struct node));
+        printf("Enter the value of he node:\n");
+        scanf("%d",&temp->data);
+        for(i=2;i<=(index-1);i++){
+            prev=prev->next;
+        }
+        temp->next=prev->next;
+        prev->next=temp;
+    }
 }
 
 void deleteLast(){
