@@ -1,5 +1,5 @@
 /*
- * Created Date: Friday June 14th 2019
+ * Created Date: Tuesday June 18th 2019
  * Author: Gurubalan Harikrishnan
  * Email-ID: gurubalan.work@gmail.com
  * -----
@@ -8,11 +8,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node{
+struct node
+{
     int data;
-    struct node *next; /*Keep in mind that node* next and node *next mean the same thing. But also keep in mind
-    that int* x,y,z means, only x is a pointer here, not y and z. Don't get confused. 
-   */
+    struct node *next;
+    struct node *prev; 
 };
 
 struct node *head=NULL;
