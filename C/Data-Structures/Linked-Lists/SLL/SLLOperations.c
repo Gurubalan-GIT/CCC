@@ -68,10 +68,10 @@ int main(){
 
 void append(){
     struct node *temp;
-    temp=(struct node *)malloc(sizeof(struct node));
+    temp=(struct node *)malloc(sizeof(struct node));//I'm typecasting because malloc() return type is void
     printf("Enter the node value-\n");
     scanf("%d",&temp->data);
-    temp->next=NULL;
+    temp->next=NULL;//Usually not needed, it's by default NULL
     if(head==NULL){
         head=temp;
     }
@@ -79,7 +79,7 @@ void append(){
         struct node *traverse;
         traverse=head;
         while(traverse->next != NULL){
-            traverse=traverse->next;
+            traverse=traverse->next;//Traversing through the list 
         }
         traverse->next=temp;
     }
@@ -109,7 +109,9 @@ void insertAtPos(){
         temp=(struct node *)malloc(sizeof(struct node));
         printf("Enter the value of he node:\n");
         scanf("%d",&temp->data);
-        for(i=2;i<=(index-1);i++){
+        for(i=2;i<=(index-1);i++){/*See here, if I have 1->2->33->44 and tell index=3, It'd mean my pointer goes till index = 2,
+        hence, new node will be inserted between nodes 2 and 33 respectively, that is before the current index postion of the node!        
+        */
             prev=prev->next;
         }
         temp->next=prev->next;
@@ -155,7 +157,8 @@ void deletePos(){
 int length(int size){
     struct node *ptr;
     ptr=head;
-    while(ptr!=NULL){
+    while(ptr!=NULL){/*Why not ptr->next? you see, it helps only to traverse and while exiting the loop, it'll end up pointing the 
+    last node, but cannot access the value of it!*/
         ptr=ptr->next;
         size++;
     }
