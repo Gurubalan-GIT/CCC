@@ -135,7 +135,21 @@ void deleteFirst(){
 }
 
 void deletePos(){
-
+    int index,i,size=0;
+    printf("Enter the index you want to delete the value from:\n");
+    scanf("%d",&index);
+    if(index==1){
+        deleteFirst();
+    }else if(index==length(size)){
+        deleteLast();
+    }else{
+        struct node *prev;
+        prev=head;
+        for(int i=2;i<=index-1;i++){
+            prev=prev->next;
+        }
+        prev->next=prev->next->next;
+    }
 }
 
 int length(int size){
