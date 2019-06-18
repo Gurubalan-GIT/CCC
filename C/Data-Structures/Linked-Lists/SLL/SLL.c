@@ -17,7 +17,7 @@ struct node{
 
 struct node *head=NULL;
 void append();
-void length();
+int length();
 void addFront();
 void insertAtPos();
 void deleteLast();
@@ -25,7 +25,7 @@ void deleteFirst();
 void deletePos();
 void printSLL();
 int main(){
-    int ch;
+    int ch,size=0;
     while(1){
         printf("\nSLL Operations:\n");
         printf("1.Append\n");
@@ -36,7 +36,7 @@ int main(){
         printf("6.Delete the first element\n");
         printf("7.Delete an element at a given position\n");
         printf("8.Print SLL\n");
-        printf("8.Exit\n");
+        printf("9.Exit\n");
 
         printf("Enter your choice:\n");
         scanf("%d",&ch);
@@ -44,7 +44,7 @@ int main(){
         {
         case 1: append();
             break;
-        case 2: length();
+        case 2: printf("\n%d",length(size));
             break;
         case 3: addFront();
             break;
@@ -119,8 +119,14 @@ void deletePos(){
 
 }
 
-void length(){
-    
+int length(int size){
+    struct node *ptr;
+    ptr=head;
+    while(ptr!=NULL){
+        ptr=ptr->next;
+        size++;
+    }
+    return size;
 }
 
 void printSLL(){
