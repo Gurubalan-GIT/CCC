@@ -109,8 +109,8 @@ void insertAtPos(){
     }else if(index==length(size)){
         append();
     }else{
-        struct node *temp,*prev;
-        prev=head;
+        struct node *temp,*pre;
+        pre=head;
         int pos=0,count=0;
         temp=(struct node *)malloc(sizeof(struct node));
         printf("Enter the value of he node:\n");
@@ -118,16 +118,17 @@ void insertAtPos(){
         for(i=2;i<=(index-1);i++){/*See here, if I have 1->2->33->44 and tell index=3, It'd mean my pointer goes till index = 2,
         hence, new node will be inserted between nodes 2 and 33 respectively, that is before the current index postion of the node!        
         */
-            prev=prev->next;
+            pre=pre->next;
         }
-        temp->next=prev->next;
-        prev->next=temp;
+        temp->next=pre->next;
+        pre->next->prev=temp;
+        temp->prev=pre;
+        pre->next=temp;
     }
 }
 
 void deleteLast(){
-    struct node *prev,*cur;
-    prev=head;
+    struct node *cur;
     cur=head;
     while(cur->next != NULL){
         cur=cur->next;
@@ -153,12 +154,13 @@ void deletePos(){
     }else if(index==length(size)){
         deleteLast();
     }else{
-        struct node *prev;
-        prev=head;
+        struct node *pre;
+        pre=head;
         for(int i=2;i<=index-1;i++){
-            prev=prev->next;
+            pre=pre->next;
         }
-        prev->next=prev->next->next;
+        pre->next->next->prev=pre;
+        pre->next=pre->next->next;
     }
 }
 
