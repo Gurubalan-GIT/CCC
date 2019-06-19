@@ -72,6 +72,7 @@ void append(){
     printf("Enter the node value-\n");
     scanf("%d",&temp->data);
     temp->next=NULL;//Usually not needed, it's by default NULL
+    temp->prev=NULL;
     if(head==NULL){
         head=temp;
     }
@@ -82,6 +83,7 @@ void append(){
             traverse=traverse->next;//Traversing through the list 
         }
         traverse->next=temp;
+        temp->prev=traverse;
     }
 }
 
@@ -91,6 +93,10 @@ void addFront(){
     printf("Enter the node value-\n");
     scanf("%d",&temp->data);
         temp->next=head;
+        temp->prev=NULL;
+        if(head!=NULL){
+            head->prev=temp;
+        }
         head=temp;
 }
 
@@ -120,20 +126,22 @@ void insertAtPos(){
 }
 
 void deleteLast(){
-    struct node *ptr,*curr;
-    ptr=head;
-    curr=head;
-    while(ptr->next != NULL){
-        ptr=ptr->next;
+    struct node *prev,*cur;
+    prev=head;
+    cur=head;
+    while(cur->next != NULL){
+        cur=cur->next;
     }
-    while(curr->next!=ptr){
-        curr=curr->next;
+    cur->prev->next=NULL;
+    /*In case of SLL : while(prev->next!=cur){
+        prev=prev->next;
     }
-    curr->next=NULL;
+    prev->next=NULL;*/
 }
 
 void deleteFirst(){
     head=head->next;
+    head->prev=NULL;
 }
 
 void deletePos(){
