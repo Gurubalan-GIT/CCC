@@ -132,19 +132,24 @@ void insertAtPos(){
 }
 
 void deleteLast(){
-    struct node *ptr,*curr;
-    ptr=head;
-    curr=head;
-    while(ptr->next != NULL){
-        ptr=ptr->next;
+    struct node *prev,*cur;
+    prev=head;
+    cur=head;
+    while(cur->next != head){
+        cur=cur->next;
     }
-    while(curr->next!=ptr){
-        curr=curr->next;
+    while(prev->next!=cur){
+        prev=prev->next;
     }
-    curr->next=NULL;
+    prev->next=head;
 }
 
 void deleteFirst(){
+    struct node *last;
+    while(last->next!=head){
+        last=last->next;
+    }
+    last->next=head->next;
     head=head->next;
 }
 
