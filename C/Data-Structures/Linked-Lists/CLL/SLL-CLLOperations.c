@@ -117,7 +117,6 @@ void insertAtPos(){
     }else{
         struct node *temp,*prev;
         prev=head;
-        int pos=0,count=0;
         temp=(struct node *)malloc(sizeof(struct node));
         printf("Enter the value of he node:\n");
         scanf("%d",&temp->data);
