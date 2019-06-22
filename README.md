@@ -84,6 +84,7 @@ This is a colloborative program for competitive coding, from scratch, till: Well
       - Setting path is easy as this - `C:\Guru> set path=%path%;C:\Program Files\Java\jdk1.8.0_101\bin`. _Run this in cmd._
       - Open command line and run `C:\Guru> javac filename.java` and `C:\Guru> java filename`.
       - _Important: Rename `.java` files to the respective class names `(Having PSVM)` or vice-versa for compilation._
+      - **Preferences :** Try *not* to define packages especially working with `IntelliJ IDEA` as if two different classes are in different packages, and is _dependent_, file moving to this repository, it will affect the local file structure.
     - Python 
       - Install [Python](https://www.python.org/downloads/) for _Windows._
       - Set the path and enter `python` in cmd to enter the python shell.
@@ -96,7 +97,8 @@ This is a colloborative program for competitive coding, from scratch, till: Well
       - [CodeChef](https://www.codechef.com/)
       - [CodeForces](http://codeforces.com/)
       - [InterviewBit](https://www.interviewbit.com/practice/) (Aptitude+Programs)
-      - [GeeksforGeeks](https://www.geeksforgeeks.org/)
+      - [GeeksforGeeks](https://www.geeksforgeeks.org/) (Aptitute+Placements+Free Courses -Company wise)
+      - [Javatpoint](https://www.javatpoint.com/)
 
 ## Non-Contributors 
 Not a contributor? Pull requests are always appretiated and accepted by the moderators here. Want to become a contributor with push access? Drop me a mail and mark it as `important`.
