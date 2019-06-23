@@ -12,7 +12,7 @@
  void printQueue();
  int front =-1,rear=-1,queue[100],n,ch;
  void main(){
-     printf("Enter the number of elements you want to enter in the Queue:\n");
+    printf("Enter the number of elements you want to enter in the Queue:\n");
     scanf("%d",&n);
     while(1){
         printf("1.Enqueue\n2.Dequeue\n3.Print Queue\n4.Exit\n");
