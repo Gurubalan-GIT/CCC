@@ -13,7 +13,7 @@ void pop();
 void printStack();
 int peek();
 int main(){
-      printf("Enter the number of elements you want to enter in the stack:\n");
+    printf("Enter the number of elements you want to enter in the stack:\n");
     scanf("%d",&n);
     while(1){
         printf("1.Push\n2.Pop\n3.Print Stack\n4.Peek\n5.Exit\n");
