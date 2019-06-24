@@ -181,3 +181,34 @@ First of all ''''''we need to find a state for which an optimal solution is foun
 		   System.out.println("Minimum number of coins for the given sum 4: "+c.minCoins(4));
 	   }
 	}
+/*When to choose what? I mean how would you choose between Memoization and Tabulation.
+  Experience:
+  -Today is an amazing day as i have solved my first dp problem :).
+  -After reading a lot of blogs,popular websites i tried to solve my first dp problem on my own.
+  -Yesterday, I started to solve the problem(details are found in the competitive-programming directory).
+  -I found out the state,parameters,state relationship,used Tabulation and thought that i had reachced the goal.
+  -Well it was not easy, I faced TLE(Time Limit Extended) and tried to write efficient code.
+  -Why not try it using Memoization?
+  -Hurrah!It worked like a charm. Guys, be smart before diving into the problem to solve.
+  -Think whether to use Memoization or Tabulation.I decided to mention some important key point on Tabulation vs.Memoizatioin
+  *Let's get Started
+    In my opinion, there is no such statement like """"Which is faster""""
+	Sometimes it is Memoization and some other time it is Tabulation.
+	**Tabulation:
+	  -People who hate recursion and concern about stack memory, use this.
+	  -This problem solves all the subproblems,like in the fibanocci case.
+	  -However sometimes it is not required to solve all the subproblems to solve a given problem.
+	   For example in the problem i have mentioned.
+	  -Most of the times fast as there are no function calls. 
+	**Memoization:
+      -Follows (recursive+cache) approach.
+	  -Easy to formulate state equation.
+	  -Most of the times not preferred as there is a function call overhead.
+	  -Preferred:
+	      1.When all the sub problems need not be solved.
+		  2.When Tabulation fails.
+ Finally,
+     Although recursive is easier to understand and code it has its own cost i terms of time and space. 
+	 Iterative solutions are always better than recursive in complexity analysis. 
+	 
+	 
