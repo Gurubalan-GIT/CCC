@@ -49,17 +49,35 @@ int main(){
 void enqueue(){
     struct node* temp;
     temp=(struct node *)malloc(sizeof(struct node));
+    printf("Enter the value of the node to be added into the queue:\n");
+    scanf("%d",&temp->data);
     if(front == NULL && rear==NULL){ //Empty queue
         front=temp;
         rear=temp;
-
-
+        front->next=NULL;
+        rear->next=NULL;
+    }else{
+        rear->next=temp;
+        rear=temp;
+        rear->next=NULL;
     }
-
 }
 void dequeue(){
-
+    if(front==NULL && rear == NULL){
+        printf("Queue is empty!");
+    }else{
+        front=front->next;
+    }
 }
 void printQueue(){
-
+    struct node *ptr;
+    ptr=front;
+    if(front==NULL && rear==NULL){
+        printf("Queue is empty!\n");
+    }else{
+        while(ptr!=NULL){
+            printf("%d\n",ptr->data);
+            ptr=ptr->next;
+        }
+    }
 }
