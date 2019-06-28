@@ -1,5 +1,5 @@
 ### Questions
-These are a collection of questions asked in TCS Code Vita 2019.
+These are a collection of questions asked in TCS Code Vita 2019 (28-29th June 2019). Please go through these and try to solve these and push into the `Competitive coding` folder inside the language folders.
 
 > ## Distribute Books :
 
