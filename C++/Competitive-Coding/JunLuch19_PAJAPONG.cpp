@@ -1,4 +1,4 @@
-//Problem link->https://atcoder.jp/contests/abc130/tasks/abc130_d
+//Problem link->https://www.codechef.com/LTIME73B/problems/PAJAPONG
 
 //Code:->
 
@@ -15,6 +15,10 @@
 #define debug(c) cout<<c<<endl;
 #define isro ios_base::sync_with_stdio(false);
 #define find(v,x) find(all(v),x)!=v.end()
+#define str(a) std::to_string(a)
+#define integer(a) std::stoi(a)
+
+ll mod=1e9+7;
 
 
 using namespace std;
@@ -25,27 +29,20 @@ typedef tuple<ll,ll,ll>ti;
 
 int main(){
     isro;
+    ll t;
+    cin>>t;
 
-    ll n,k;
-    cin>>n>>k;
-
-    vi v(n);
-
-    for(ll i=0;i<n;i++)   cin>>v[i];
-    
-    ll ans=0,j=0,sum=0;
-    for(ll i=0;i<n;i++){
-
-        while(sum<k and j<n){
-            sum+=v[j];
-            j++;
+    while(t--){
+        ll x,y,k;
+        cin>>x>>y>>k;
+        ll a;
+        a=(x+y)/k;
+        if(a%2==0){
+            cout<<"Chef"<<endl;
         }
-        if(sum<k)  break;
+        else{
+            cout<<"Paja"<<endl;
+        }
 
-        ans+=n+1-j; 
-        sum-=v[i]; 
     }
-
-      cout<<ans<<endl;
-
 }
