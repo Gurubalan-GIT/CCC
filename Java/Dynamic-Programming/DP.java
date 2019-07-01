@@ -181,7 +181,6 @@ First of all ''''''we need to find a state for which an optimal solution is foun
 		   System.out.println("Minimum number of coins for the given sum 4: "+c.minCoins(4));
 	   }
 	}
-
 /*When to choose what? I mean how would you choose between Memoization and Tabulation.
   Experience:
   -Today is an amazing day as i have solved my first dp problem :).
@@ -211,5 +210,3 @@ First of all ''''''we need to find a state for which an optimal solution is foun
  Finally,
      Although recursive is easier to understand and code it has its own cost i terms of time and space. 
 	 Iterative solutions are always better than recursive in complexity analysis. 
-	  
- 
