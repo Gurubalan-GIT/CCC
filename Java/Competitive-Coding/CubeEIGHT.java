@@ -1,3 +1,11 @@
+/**
+ * Created Date:  June 1st 2019
+ * @author ganesh chowdhary sadanala
+ * Email-ID: ganesh8374387106@gmail.com
+ * -----
+ * Description: https://www.spoj.com/problems/EIGHTS/
+ */
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
