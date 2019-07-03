@@ -505,3 +505,89 @@ Output
 **_Explanation_**
 
 In the above example, the target will not be achieved, even by equipping all the rooms with TV. Hence, the answer is 10 i.e. total number of rooms in the hospital.
+
+> ## War Companion
+
+**Problem Description**
+
+Infinity War is Over. Thanos has successfully collected all the Infinity Stones and wiped out half the population of the universe. Now the world depends on the remaining Avengers to bring back their loved ones.
+
+To get a last chance of defeating Thanos, the Avengers has put together a team of its best warriors to try to steal the Infinity Gauntlet and restore order to the universe. The warriors must be put in pairs into its warships and sent out. Obviously, the team size is even.
+
+Each warrior in the warship needs to work well with his partner in the warship, and chemistry between them is important. Hence the Supreme Commander has requested all the warriors to give a list of the remaining warriors in the team in the order of their preferring to work with them.
+
+Using these lists the Supreme Commander needs to create a set of suitable pairs of warriors, with each warrior getting a partner. A set of pairings of warriors is not suitable if two warriors exist who both prefer each other more than their existing partner. The Supreme Commander recognizes that there can be more than one set of suitable pairs of warriors. He ranks the warriors in descending order of competence, so that the most competent are at the top. He has directed you, his chief analyst, to create a suitable set of pairings that lets the most competent warrior to partner someone as high in list of preferences as possible, and then the next most competent warrior to work with as high a person on his list as possible, and so on.
+
+Please write a program to create a suitable set of pairings that meets the Supreme Commander’s directions. If no such pairing exits, indicate that.
+
+**Constraints**
+
+N <= 10
+
+**Input Format**
+
+First line contains the number of warriors (N).
+
+Next N lines contain the preference list of N warriors, where the first word in the line is the warrior and the next (N-1) words are the warriors in the preference order.
+
+The N lines give the warriors in order of decreasing competence
+
+**Output**
+
+A set of suitable pairs as directed by the Supreme Commander. If no suitable sets exist, output “No Suitable Pairs.”.
+
+**Test Case**
+
+_Example-1 :_
+
+```
+Input
+
+6
+
+Ironman Thor Blackwidow Hawkeye Hulk Captainamerica
+
+Thor BlackwidowCaptainamerica Hawkeye Ironman Hulk
+
+Hulk BlackwidowCaptainamerica Hawkeye Ironman Thor
+
+Blackwidow Hawkeye Hulk Ironman Captainamerica Thor
+
+Captainamerica Hawkeye Hulk Blackwidow Thor Ironman
+
+Hawkeye Ironman Thor Blackwidow Hulk Captainamerica
+
+Output
+
+Ironman,Hawkeye
+
+Thor,Captainamerica
+
+Hulk,Blackwidow
+```
+_**Explanation**_
+
+This is a suitable set of pairs. If we take a pair of warriors, say Thor and Blackwidow,though Thor prefers Blackwidow to his current partner (Captainamerica), Blackwidow prefers the current partner(Hulk) to Thor. Similarly all other pairs of warriors can be checked to see that this is a suitable set of pairings.
+
+_Example-2 :_
+
+```
+Input
+
+4
+
+Charles Wolverine Jean Deadpool
+
+Wolverine Jean Charles Deadpool
+
+Jean Charles Wolverine Deadpool
+
+Deadpool Charles Wolverine Jean
+
+Output
+
+No Suitable Pairs.
+```
+**_Explanation_**
+
+It can be seen that there is no suitable set of pairings. If Deadpool is paired with say Charles, and the other two paired with each other, consider the warriors Charles and Jean. Charles prefers Jean to his current partner, Deadpool, and Jean prefers Charles to the current partner, Wolverine. Hence this is not a suitable pairing. Similarly, Deadpool cannot be paired with anyone else to form a suitable set. Thus the output is “No Suitable Pairs”
