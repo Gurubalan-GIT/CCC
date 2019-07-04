@@ -13,7 +13,7 @@
  class MergeSort 
  {
 	 void mergeSort(int a[],int p,int r)
-	 {
+	 {   int q=0;
 		 if(p==r)
 			 return ;
 		 else
@@ -30,21 +30,27 @@
 	 {
 		 int n1=q-p+1;
 		 int n2=r-q;
-		 int l[]=new int[n1];
-		 int r[]=new int[n2];
+		 int l[]=new int[n1+1];
+		 int r1[]=new int[n2+1];
 		 l[n1]=Integer.MAX_VALUE;
-		 r[n2]=Integer.MAX_VALUE;
+		 r1[n2]=Integer.MAX_VALUE;
+		  for (int i=0; i<n1; ++i) 
+            l[i] = a[p + i]; 
+        for (int j=0; j<n2; ++j) 
+            r1[j] = a[q + 1+ j]; 
+		
 		 int i=0,j=0;
-		 for(int k=0;k<r;k++)
+		 
+		 for(int k=p;k<r;k++)
 		 {
-			 if(l[i]<=r[j])
+			 if(l[i]<=r1[j])
 			 {
 				 a[k]=l[i];
 				 i+=1;
 			 }
-			 else if(r[j]<=l[i])
+			 else if(r1[j]<=l[i])
 			 {
-				 a[k]=r[j];
+				 a[k]=r1[j];
 				 j+=1;
 			 }
 		 }
@@ -53,7 +59,8 @@
 	 {
 		 int arr[]={2,5,1,3,7,4};
 		 MergeSort mergesort=new MergeSort();
-		 mergesort.mergeSort(arr,0,arr.length()-1);
-		 
+		 mergesort.mergeSort(arr,0,arr.length-1);
+		 System.out.println(arr);
 	 }
  }
+ 
