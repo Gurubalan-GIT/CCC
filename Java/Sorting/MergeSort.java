@@ -14,9 +14,8 @@
  {
 	 void mergeSort(int a[],int p,int r)
 	 {   int q=0;
-		 if(p==r)
-			 return ;
-		 else
+
+		 if(p<r)
 		 {
 			 q=(p+r)/2;   //Divide
 			 mergeSort(a,p,q);  // subproblems
@@ -30,10 +29,10 @@
 	 {
 		 int n1=q-p+1;
 		 int n2=r-q;
-		 int l[]=new int[n1+1];
-		 int r1[]=new int[n2+1];
-		 l[n1]=Integer.MAX_VALUE;
-		 r1[n2]=Integer.MAX_VALUE;
+		 int l[]=new int[n1];
+		 int r1[]=new int[n2];
+		 //l[n1]=Integer.MAX_VALUE;
+		 //r1[n2]=Integer.MAX_VALUE;
 		  for (int i=0; i<n1; ++i) 
             l[i] = a[p + i]; 
         for (int j=0; j<n2; ++j) 
@@ -48,11 +47,18 @@
 				 a[k]=l[i];
 				 i+=1;
 			 }
-			 else if(r1[j]<=l[i])
+			 else 
 			 {
 				 a[k]=r1[j];
 				 j+=1;
 			 }
+		 }
+	 }
+	 void print(int arr[])
+	 {
+		 for(int i=0;i<arr.length;i++)
+		 {
+			 System.out.println(arr[i]);
 		 }
 	 }
 	 public static void main(String []args)
@@ -60,7 +66,7 @@
 		 int arr[]={2,5,1,3,7,4};
 		 MergeSort mergesort=new MergeSort();
 		 mergesort.mergeSort(arr,0,arr.length-1);
-		 System.out.println(arr);
+		 mergesort.print(arr);
 	 }
  }
  
