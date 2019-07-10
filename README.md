@@ -6,9 +6,11 @@ This is a colloborative program for competitive coding, from scratch, till: Well
     - [To-do](#to-do)
     - [Communication]()
     - [Git](#Git) 
-    - [Coding](#coding) 
+    - [Coding](#coding)
+    - [TNQT-2020](#TNQT-2020) 
     - [Contribution Guidelines](/contributing.md/#contribution-guidelines) 
-    - [Contributors](/contributing.md/#contributors) 
+    - [Contributors](/contributing.md/#contributors)
+   
   - [Non-Contributors](#non-contributors)
 
 ## Contributors 
@@ -99,6 +101,9 @@ This is a colloborative program for competitive coding, from scratch, till: Well
       - [InterviewBit](https://www.interviewbit.com/practice/) (Aptitude+Programs)
       - [GeeksforGeeks](https://www.geeksforgeeks.org/) (Aptitute+Placements+Free Courses -Company wise)
       - [Javatpoint](https://www.javatpoint.com/)
+  
+## TNQT-2020
+Updates for TNQT will be updated here.
 
 ## Non-Contributors 
 Not a contributor? Pull requests are always appretiated and accepted by the moderators here. Want to become a contributor with push access? Drop me a mail and mark it as `important`.
