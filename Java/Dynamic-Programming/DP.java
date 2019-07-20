@@ -153,28 +153,29 @@ First of all ''''''we need to find a state for which an optimal solution is foun
 	  }
 	  /* @return minimum number of coins for a given sum */
 	  
-	   public int minCoins(int sum)
-	   {
-		 int Min[] = new int[sum+1]; 
-		                               
-		 for(int i=1;i<=sum;i++)
-			 Min[i] = -1;
-		 
-		 Min[0] = 0;
-		 
-		 for(int i=1;i<=sum;i++)
-		 {
-			for(int j=0;j<cvalue.length;j++)
-			{   
-		       if(cvalue[j]<=i&&Min[i-cvalue[j]]+1){
-				   
-				Min[i] = Min[i-cvalue[j]]+1;
-				
-			    }
-                return Min[sum];				
-			}				
-		 }
-	   }
+	   public int minCoins(int sum,int cvalue[])
+       {
+         int Min[] = new int[sum+1]; 
+                                       
+         for(int i=1;i<=sum;i++)
+             Min[i] = Integer.MAX_VALUE;
+         
+         Min[0] = 0;
+         
+         for(int i=1;i<=sum;i++)
+         {
+            for(int j=0;j<cvalue.length;j++)
+            {   
+               if(cvalue[j]<=i&&(Min[i-cvalue[j]]+1)<Min[i]){
+                   
+                Min[i] = Min[i-cvalue[j]]+1;
+                
+                }
+                                
+            }                
+         }
+		 return Min[sum];
+       }
 	   public static void main(String []args)
 	   {
 		   Coins c = new Coins(3);
