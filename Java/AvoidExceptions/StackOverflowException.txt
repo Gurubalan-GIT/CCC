@@ -1,0 +1,714 @@
+JNDanial.com
+How to avoid stack overflow in recursive methods
+Posted on September 18, 2018 by JNDanial
+You can find the complete source code for the project on Github:
+
+https://github.com/jndanial/avoidStackOverflow
+
+ 
+
+Stack and heap in java:
+On the one hand, The objects created by the Java program or application and that get stored in a particular location that is called Java heap. It is mainly done by using “new” operator. During the runtime, a memory of new objects is allocated on the heap. Reference variables are stored inside the object in which they are declared.
+
+On the other hand, The local variables that will be stored and method invocations are present in the specified memory that is called Stack. While the method is getting invoked then its stack frame will put on the top of a call stack. The stack frame holds the state of a method which is having the particular lines of code that are getting executed and all the local variables. The current running method of the stack is always the method which is at the top of a stack.
+
+ 
+
+Stack Overflow:
+In our computer’s memory, stack size is limited and usually very smaller than heap size. If a program uses more memory space than the stack size then stack overflow will occur and can result in a program crash. If function recursively call itself infinite times then the stack is unable to store large number of local variables used by every function call and will result in overflow of stack.
+
+ 
+
+Recursive methods:
+There are cases where we prefer to use recursive functions such as sort or tree operations. However, if the recursive function goes too deep, an unwanted result might occur such as a stack overflow. Many professional developers probably already know how to replace recursive functions to avoid stack overflow problems in advance by replacing with iterative function or using stack and while-loop. Now we are going to explain the solution.
+
+ 
+
+Describe the solution:
+If you are using recursive function, since you don’t have control on call stack and the stack is limited, the stack-overflow might occur when the recursive call’s depth gets too deep. We are going to write a simulated function and  the purpose of this function is moving the call stack to a stack in heap, so the you can have more control on memory and process flow, and avoid the stack overflow.
+
+ 
+
+                                    Pros	                         Cons
+Recursive function	Very intuitive about the algorithm	May occur “Stack-overflow”
+Simulated function	Can avoid “Stack-overflow” error.
+More control on process flow and memory.	Not very intuitive about the algorithm.
+Hard to maintain the code.
+ 
+
+We describe the steps and apply the steps on a sample. Our sample is calculate total numbers between n and zero. First of all we write the recursive method to do it.
+
+Java
+    public static int rSumNumbers(int n){
+        if(n>0){
+            int sum = n + rSumNumbers(n-1);
+            return sum;
+        }
+        return 0;
+    }
+1
+2
+3
+4
+5
+6
+7
+    public static int rSumNumbers(int n){
+        if(n>0){
+            int sum = n + rSumNumbers(n-1);
+            return sum;
+        }
+        return 0;
+    }
+In this sample when you run  System.out.println(rSumNumbers(100000));  you get stack overflow error. Now we explain the steps.
+
+In the First step we have to create an object that contains input parameters (in our example ‘n’) and local variables (in our example ‘sum’) and a variable, usually an int to switch into the correct process divisions.
+
+Java
+    static class SnapShotObject{
+        int n;
+        int sum;
+        int stage;
+    }
+1
+2
+3
+4
+5
+    static class SnapShotObject{
+        int n;
+        int sum;
+        int stage;
+    }
+Step two: Create method, define a local variable that represent the role of the return function in the recursive function and a new instance of SnapShotObject.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        return returnVal;
+    }
+Step three: Define a stack Object of the “Snapshot”.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        
+        return returnVal;
+    }
+Step four: Create a new “Snapshot” instance, and initialize with input parameters, initial value for return variable and the start “Stage” number set to base number in most cases set to zero after that push the Snapshot instance into the empty stack.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        return returnVal;
+    }
+Step five: Write a while loop which with condition the stack is not empty and at each iteration of the while loop, pop a Snapshot object from the stack.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+        }
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+        }
+ 
+        return returnVal;
+    }
+Step six: We need a switch case with two case. The first case represents the code in the recursive function that is processed before the next recursive call is made, and the second case represents the code that is processed when the next recursive call returns .
+In the situation where there are two recursive calls within a function, there must be three stages:
+Before first recursive call, between two recursive calls, after last recursive call.
+In the situation where there are three different recursive calls then there must be at least 4 stages.
+And so on.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+
+            switch (currentSnapShot.stage){
+                case 0:
+                    break;
+                case 1:
+                    break;
+            }
+        }
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+ 
+            switch (currentSnapShot.stage){
+                case 0:
+                    break;
+                case 1:
+                    break;
+            }
+        }
+ 
+        return returnVal;
+    }
+Step seven: Write code for each stages, in our example stage 0 contains codes before recursive method (if statement) and stage 1 contains codes after recursive (get result and ad to sum).
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                    }
+                    break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    break;
+            }
+        }
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+ 
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                    }
+                    break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    break;
+            }
+        }
+ 
+        return returnVal;
+    }
+Step eight:  If there is a return type for the recursive function, store the result of the loop iteration in a local variable in each case.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                    }
+                    returnVal = 0;
+                    break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    returnVal = currentSnapShot.sum;
+                    break;
+            }
+        }
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+ 
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                    }
+                    returnVal = 0;
+                    break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    returnVal = currentSnapShot.sum;
+                    break;
+            }
+        }
+ 
+        return returnVal;
+    }
+Step nine: In a case where there are “return” keywords within the recursive function, the “return” keywords should be converted to “continue” within the “while” loop.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                    }
+                    returnVal = 0;
+                    continue;
+                    //break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    returnVal = currentSnapShot.sum;
+                    continue;
+                    //break;
+            }
+        }
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+ 
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                    }
+                    returnVal = 0;
+                    continue;
+                    //break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    returnVal = currentSnapShot.sum;
+                    continue;
+                    //break;
+            }
+        }
+ 
+        return returnVal;
+    }
+Step ten: To convert the recursive call within the recursive function, in iterative function, make a new “Snapshot” object, initialize the new “Snapshot” object stage, set its member variables according to recursive call parameters, and push into the stack, and “continue”
+If there is process to be done after the recursive call, change the stage variable of current “Snapshot” object to the relevant stage, and push into the stack before pushing the new “Snapshot” object into the stack.
+
+Java
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                        currentSnapShot.stage = 1;
+                        snapShotObjectStack.push(currentSnapShot);
+                        SnapShotObject newSnapShot = new SnapShotObject();
+                        newSnapShot.n = currentSnapShot.n -1;
+                        newSnapShot.sum = 0;
+                        newSnapShot.stage = 0;
+                        snapShotObjectStack.push(newSnapShot);
+                    }
+                    returnVal = 0;
+                    continue;
+                    //break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    returnVal = currentSnapShot.sum;
+                    continue;
+                    //break;
+            }
+        }
+
+        return returnVal;
+    }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+    public static int sumNumbers(int n){
+        int returnVal = 0;
+ 
+        Stack<SnapShotObject> snapShotObjectStack = new Stack<>();
+ 
+        SnapShotObject currentSnapShot = new SnapShotObject();
+        currentSnapShot.n = n;
+        currentSnapShot.sum = 0;
+        currentSnapShot.stage = 0;
+        snapShotObjectStack.push(currentSnapShot);
+ 
+        while(!snapShotObjectStack.empty()){
+            currentSnapShot = snapShotObjectStack.pop();
+ 
+            switch (currentSnapShot.stage){
+                case 0:
+                    if(currentSnapShot.n > 0){
+                        currentSnapShot.stage = 1;
+                        snapShotObjectStack.push(currentSnapShot);
+                        SnapShotObject newSnapShot = new SnapShotObject();
+                        newSnapShot.n = currentSnapShot.n -1;
+                        newSnapShot.sum = 0;
+                        newSnapShot.stage = 0;
+                        snapShotObjectStack.push(newSnapShot);
+                    }
+                    returnVal = 0;
+                    continue;
+                    //break;
+                case 1:
+                    currentSnapShot.sum = returnVal;
+                    currentSnapShot.sum = currentSnapShot.sum + currentSnapShot.n;
+                    returnVal = currentSnapShot.sum;
+                    continue;
+                    //break;
+            }
+        }
+ 
+        return returnVal;
+    }
+ 
+
+In many cases, the recursive functions are easy to understand, and easy to write with the downside of “if the recursive function call’s depth goes too deep, it leads to stack-overflow error”. So conversion from recursive function to simulated function is not for increasing readability nor increasing algorithmic performance, but it is simple way of evading the crashes or undefined behaviors/errors, But in some cases you can use a simple way for example in our example we can use a simple ‘for’ statement and we don’t need recursive method or our new method, but this is a general way and you can apply it on any recursive methods.
