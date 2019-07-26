@@ -103,7 +103,8 @@ This is a colloborative program for competitive coding, from scratch, till: Well
       - [Javatpoint](https://www.javatpoint.com/)
   
 ## TNQT-2020
-Updates for TNQT will be updated here.
+These are questions done for TNQT 2020 exam and you can find them [here](/TNQT-2020/README.md).
+More company specific codes will be updated as time passes.
 
 ## Non-Contributors 
 Not a contributor? Pull requests are always appretiated and accepted by the moderators here. Want to become a contributor with push access? Drop me a mail and mark it as `important`.
