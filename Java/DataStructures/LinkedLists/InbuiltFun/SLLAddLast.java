@@ -1,3 +1,5 @@
+package InbuiltFun;
+
 /*
  * Created Date: Monday June 17th 2019
  * Author: Gurubalan Harikrishnan
