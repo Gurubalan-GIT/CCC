@@ -32,5 +32,6 @@ class SM1 {
             }
         }
         System.out.println(result);
+        scanner.close();
     }
 }

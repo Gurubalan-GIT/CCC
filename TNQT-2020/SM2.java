@@ -21,5 +21,7 @@ class SM2{
         }else{
             System.out.println("No, the input is not a keyword");
         }
+        scanner.close();
     }
+    
 }
