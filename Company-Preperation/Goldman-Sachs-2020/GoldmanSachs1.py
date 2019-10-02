@@ -24,3 +24,19 @@ for _ in range(t):
             break
     if flag==0:
         print(-1)
+       
+'''Sample Input Case:
+3
+5
+hiiii
+9
+asjdlkjap
+3
+aaa
+
+Output:
+h
+s
+-1
+'''
+    
