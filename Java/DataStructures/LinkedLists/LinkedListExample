@@ -1,0 +1,154 @@
+/*
+ * Created Date: Thursday October 3 2019
+ * Author: Abhishek Guleri
+ * Email-ID: abhishekguleri24@gmail.com
+ * -----
+ * Copyright (c) 2019 Abhishek Guleri
+ */
+import java.util.*;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("==========================LinkedListExample===============================");
+        LinkedListExample linkedListExample = new LinkedListExample();
+        linkedListExample.linkedListExample();
+
+        System.out.println("==========================LinkedHashSetExample===============================");
+        LinkedHashSetExample linkedHashSetExample = new LinkedHashSetExample();
+        linkedHashSetExample.linkedHashSetExample();
+
+        System.out.println("==========================LinkedHashMapExample===============================");
+        LinkedHashMapExample linkedHashMapExample = new LinkedHashMapExample();
+        linkedHashMapExample.linkedHashMapExample();
+
+        System.out.println("==========================CollectionsExample===============================");
+        CollectionsExample collectionsExample = new CollectionsExample();
+        collectionsExample.collectionsExample();
+    }
+}
+
+class LinkedListExample {
+    // A list is an ordered collection.
+    // Allows duplicate data
+    public void linkedListExample() {
+        // LinkedList starts from 0......
+        LinkedList<String> l = new LinkedList<>();
+        System.out.println(l.size() + " " + l.isEmpty()); // size=0
+        l.add("a");
+        l.add("b");
+        l.add("h");
+        l.add("i");
+        l.add("s");
+        l.add("h");
+        l.add("e");
+        l.add("k");
+        l.add("i");
+        l.add("love");
+        l.add("u");
+        System.out.println(l); // print all elements
+        System.out.println(l.set(1, "x")); // print specific elements
+        l.add(2, "a");  // change the element
+        System.out.println(l);
+        System.out.println(l.pollFirst() + " " + l.peekFirst()); // print first element and second element
+        // remove the first element and make second element first and corresponding other change their position
+        // according to that.
+        System.out.println(l);
+        System.out.println(l.get(4));// print the index element
+        l.remove("a");  // remove element
+        System.out.println(l);
+        System.out.println(l.size() + " " + l.isEmpty());
+        for (String s : l) {
+            System.out.print(s);
+        }
+    }
+}
+
+class LinkedHashSetExample {
+    // A set does not allow duplicates.
+    public void linkedHashSetExample() {
+        LinkedHashSet<String> s = new LinkedHashSet<>();
+        System.out.println(s.size() + " " + s.isEmpty()); // print size and state of the set
+        System.out.println(s.add("values1"));
+        System.out.println(s.add("values2"));
+        System.out.println(s.add("values3"));
+        System.out.println(s.add("values1")); // duplicate
+        System.out.println(s);
+        System.out.println(s.contains("values3") + " " + s.contains("values9"));
+        System.out.println(s.remove("values2") + " " + s.remove("values2")); // remove and already removed
+        System.out.println(s);
+        System.out.println(s.size() + " " + s.isEmpty());
+        for (String v : s) {
+            System.out.print(v);
+        }
+
+    }
+}
+
+class LinkedHashMapExample {
+    // Maps map keys to values.
+    // a Map cannot have any duplicate keys
+    public void linkedHashMapExample() {
+        LinkedHashMap<String, String> m = new LinkedHashMap<>();
+        System.out.println(m.size() + " " + m.isEmpty());
+        System.out.println(m.put("key1", "value1"));
+        System.out.println(m.put("key2", "value2"));
+        System.out.println(m.put("key3", "value3"));// currently key3 has null value
+        System.out.println(m.put("key3", "value1"));// key3 has value3
+        System.out.println(m.put("key3", "value2"));// key3 has value1
+
+        System.out.println(m); // print all key and values
+        System.out.println(m.containsKey("key2") + " " + m.containsValue("key2")); // key2 named key present but not value
+        System.out.println(m.containsKey("values1") + " " + m.containsValue("value1"));
+        System.out.println("x");
+        System.out.println(m.get("key2") + " " + m.remove("key1"));  // get value of key2 and remove key1 value
+        System.out.println(m);
+        System.out.println(m.size() + " " + m.isEmpty());
+        for (String k : m.keySet()) {
+            System.out.print(k);
+        }
+        System.out.println();
+        for (String v : m.values()) {
+            System.out.println(v);
+        }
+        System.out.println();
+        for (Map.Entry<String, String> e : m.entrySet()) {
+            System.out.println("[" + e.getKey() + " " + e.getValue() + "]");
+        }
+
+    }
+}
+
+class CollectionsExample {
+    // Collections contains static factory and helper methods for working with collections.
+    public void collectionsExample() {
+        String[] a = new String[]{"apple", "banana", "kiwi", "banana", "grape", "zero", "100"};  // array of String
+        List<String> l = new ArrayList<>();
+        Collections.addAll(l, a); // add element of array to the list
+        System.out.println(l);
+        System.out.println(Collections.frequency(l, "banana")); // print the frequency
+        System.out.println(Collections.min(l)); // print min alpha-numeric wise
+        System.out.println(Collections.max(l)); // print max alpha- numeric wise
+        Collections.swap(l, 0, 2);  // swap the elements
+        System.out.println(l);
+        Collections.reverse(l); // reverse the list
+        Collections.sort(l);   // sort the list
+        System.out.println(l);
+
+        List<String> unmodifiable = Collections.unmodifiableList(l); // create a unmodifiable list of the l
+        for (String u : unmodifiable) {
+            System.out.println(u);
+            System.out.println();
+            try {
+                unmodifiable.add("pear");
+            } catch (UnsupportedOperationException e) {
+                e.getStackTrace();
+            }
+        }
+    }
+
+}
+
+
+
