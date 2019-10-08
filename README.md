@@ -36,10 +36,11 @@ This is a collaborative program for competitive coding, from scratch, till: Well
 
     ~~[x] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md).~~
 
-    - [ ] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.  
+    ~~[x] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.~~
   
-    ~~- [x] File name syntax will be updated later. (Start pushing code in the given topics or even add more by creating a new folder!)~~
-    - [ ] Bring in topics from CodeChef, CodeForces and others.
+    ~~[x] File name syntax will be updated later. (Start pushing code in the given topics or even add more by creating a new folder!)~~
+
+     ~~[ ] Bring in topics from CodeChef, CodeForces and others.~~
 
     ~~[x] Update Compiler Design and Operating system programs.~~
     
