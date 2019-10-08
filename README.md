@@ -112,7 +112,7 @@ This is a collaborative program for competitive coding, from scratch, till: Well
       - [Javatpoint](https://www.javatpoint.com/)
   
 ## TNQT-2020
-These are questions done for TNQT 2020 exam and you can find them [here](/Company-Preperation/TNQT-2020).'
+These are questions done for TNQT 2020 exam and you can find them [here](/Company-Preperation/TNQT-2020).
 More company specific codes will be updated as time passes.
 
 ## Non-Contributors 
