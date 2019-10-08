@@ -32,21 +32,25 @@ This is a collaborative program for competitive coding, from scratch, till: Well
 
   - ## To-do 
 
-    ~~[x] Complete the [Read-me.md](/README.md) documentation.~~
+    - [x] Complete the [Read-me.md](/README.md) documentation.
 
-    ~~[x] Add all the contributors and add them to [contributers](/contributing.md/#contributers) in the [contributing.md](/contributing.md) documentation.~~
+    - [x] Add all the contributors and add them to [contributers](/contributing.md/#contributers) in the [contributing.md](/contributing.md) documentation.
 
-    ~~[x] Create the file structure boiler plate to start pushing code.~~
+    - [x] Create the file structure boiler plate to start pushing code.
 
-    ~~[x] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md).~~
+    - [x] Update contribution guidelines with file name syntax and code guidelines in [contributing.md](/contributing.md).
 
-    ~~[x] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.~~
+    - [x] Clean up the Read-me files inside each folder created for file structure purposes and replace them with proper documentation with links for the coding questions pushed.
   
-    ~~[x] File name syntax will be updated later. (Start pushing code in the given topics or even add more by creating a new folder!)~~
+    - [x] File name syntax will be updated later. (Start pushing code in the given topics or even add more by creating a new folder!)
 
-     ~~[ ] Bring in topics from CodeChef, CodeForces and others.~~
+    - [x] Bring in topics from CodeChef, CodeForces and others.
 
-    ~~[x] Update Compiler Design and Operating system programs.~~
+    - [x] Update Compiler Design and Operating system programs.
+
+    - [ ] Bring in contributers from Reddit and other social media during December.
+  
+    - [ ]  Revamp and add moderators to the program for Github management of Branches, merging and reviews.
     
   - ## Communication
 
