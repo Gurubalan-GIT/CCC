@@ -7,7 +7,7 @@ This is a collaborative program for competitive coding, from scratch, till: Well
     - [Communication]()
     - [Git](#Git) 
     - [Coding](#coding)
-    - [TNQT-2020](#TNQT-2020) 
+    - [Company-Wise Questions](#Company-Wise-Questions) 
     - [Contribution Guidelines](/contributing.md/#contribution-guidelines) 
     - [Contributors](/contributing.md/#contributors)
    
@@ -26,8 +26,10 @@ This is a collaborative program for competitive coding, from scratch, till: Well
     ```
     If any problems arrive communicate through the group or through Issues as well. Happy coding, guys! 
 
-    
+
     *Important:* If you want to push thing do keep it a practice to create a new branch and merge them after a pull request. This way other people can merge/review your work and also avoids conflicts with other users also in the same branch. Makes the working tree clean.
+
+    
     
 
   - ## To-do 
@@ -111,8 +113,8 @@ This is a collaborative program for competitive coding, from scratch, till: Well
       - [GeeksforGeeks](https://www.geeksforgeeks.org/) (Aptitute+Placements+Free Courses -Company wise)
       - [Javatpoint](https://www.javatpoint.com/)
   
-## TNQT-2020
-These are questions done for TNQT 2020 exam and you can find them [here](/Company-Preperation/TNQT-2020).
+## Company-Wise Questions
+These are questions done according to different company-specific exams and you can find them [here](/Company-Preperation).
 More company specific codes will be updated as time passes.
 
 ## Non-Contributors 
