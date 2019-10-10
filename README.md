@@ -26,9 +26,9 @@ This is a collaborative program for competitive coding, from scratch, till: Well
     ```
     If any problems arrive communicate through the group or through Issues as well. Happy coding, guys! 
 
-    ```
-    If you want to push thing do keep it a practice to create a new branch and merge them after a pull request. This way other people can merge/review your work and also avoids conflicts with other users also in the same branch. Makes the working tree clean.
-    ```
+    
+    *Important:* If you want to push thing do keep it a practice to create a new branch and merge them after a pull request. This way other people can merge/review your work and also avoids conflicts with other users also in the same branch. Makes the working tree clean.
+    
 
   - ## To-do 
 
