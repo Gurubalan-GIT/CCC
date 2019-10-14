@@ -1,0 +1,53 @@
+public class JavaString{
+public static void main(String[] args){
+System.out.println("Hello terminal");
+
+/* JVM divides the memory to a Java program into two parts.
+1. Stack : Stack is used for execution purpose .
+2. Heap : Heap is used for storage purpose.
+       In heap memory, JVM allocates some memory specially meant for
+       string literals. This part is also called String Constant Pool.
+*/
+// When we create string objects like below, they will be stored in the String Constant Pool.
+String s1 = "abc";
+String s2 = "xyz";
+String s3 = "123";
+String s4 = "A";
+
+/* And when we create a string objects using new keyword like below,
+they will be stored in the heap memory.
+*/
+String s5 = new String("abc");
+char[] c = {'J','A','V','A'};
+String s6 = new String(c);
+String s7 = new String(new StringBuffer());
+
+// # imp:: no two objects has same value in String Constant Pool.
+// Then it returns the reference of the object.
+
+/*
+ The above can we proved using the '==' operator.
+i.e. if both the objects has same physical addredd in the memory it gives true
+     otherwise it returns false.
+*/
+String S1 = "abc";
+String S2 = "abc";
+System.out.println(S1==S2);
+// Output is true;
+String S3 = new String("abc");
+String S4 = new String("abc");
+System.out.println(S3==S4);
+// Output is false;
+
+/*
+Important point :
+    When we create an object using new operator first JVM will check
+   if there is any String with the same content in String Constant Pool.
+   If yes it won't create an object in string constant pool or else it  
+   will create object both in heap and String constant pool.
+*/
+String name1 = "Abhishek"; // object will be created SCP
+String name2 = new String("Guleri"); // object will be created in both heap and SCP
+String name3 = new String("Abhishek"); // object will be created only in heap because SCP has already object.
+}
+}
